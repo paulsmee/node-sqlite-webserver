@@ -2,9 +2,19 @@
 <html>
     <head>
         <title>Hudson Science Labs </title>
-        <script src='./jquery.min1.9.1.js'></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     </head>
     <body>
+        <form method="post" action="/">
+            <input type="text" name="user[firstName]">
+            <input type="text" name="user[lastName]">
+            <input type="submit" value="Submit">
+        </form>
+        <form method="post" action="/view">
+            <input type="text" name="user[firstName]">
+            <input type="text" name="user[lastName]">
+            <input type="submit" value="Submit">
+        </form>
 <!-- Show Temps from DB -->
         <div>
             <p id="p1">Test</p>
@@ -15,7 +25,7 @@
                   $.get('/view')
                     .done(function(value2) {
                       console.log(value2)
-                      document.getElementById("p1").innerHTML = "The current temperature outside is: " + value2+''+"c";
+                      document.getElementById("p1").innerHTML = "The current temperature in your house is: " + value2+''+"c";
                     })
                     .catch(function(err) {
                       console.log('uh oh')
