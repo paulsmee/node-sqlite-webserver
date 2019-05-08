@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hudson Science Labs </title>
+        <script src='./jquery.min1.9.1.js'></script>
+    </head>
+    <body>
+<!-- Show Temps from DB -->
+        <div>
+            <p id="p1">Test</p>
+            <br>
+            <p id="p2">Test</p>
+        </div>
+        
+         <script>
+                window.getTempFromDatabase = function() {
+                  $.get('/currentTemp')
+                    .done(function(value2) {
+                      console.log(value2)
+                      document.getElementById("p1").innerHTML = "The current temperature outside is: " + value2+''+"c";
+                    })
+                    .catch(function(err) {
+                      console.log('uh oh')
+                    });
+              }
+            </script>
+            <br>
+         <script>
+           getTempFromDatabase();
+          //  setInterval(getTempFromDatabase,6000)
+         </script>
+                  <script>
+                    window.getTempFromDatabase = function() {
+                      $.get('/selectedTemp')
+                        .done(function(value2) {
+                          console.log(value2)
+                          document.getElementById("p2").innerHTML = "The temperature outside on Saturday was: " + value2+''+"c";
+                        })
+                        .catch(function(err) {
+                          console.log('uh oh')
+                        });
+                  }
+                </script>
+                <br>
+             <script>
+               getTempFromDatabase();
+              //  setInterval(getTempFromDatabase,6000)
+             </script>
+    </body>
+</html>

@@ -10,12 +10,19 @@ router.use(express.urlencoded())
 router.use(express.json())
 
 router.get('/', function(req, res) {
-  res.sendFile('/index.html')
+  res.sendFile(__dirname + '/hsl.html')
   console.log("Access Detected!")
 })
 
-router.get('/view', function(req, res) {
+router.get('/currentTemp', function(req, res) {
   res.send(tempstats.currentTemp+'')
+})
+router.get('/selectedTemp', function(req, res) {
+  res.send(tempstats.selectedTemp+'')
+})
+router.get('/view', function(req, res) {
+  res.sendJson('/test.json')
+  console.log('/test.json')
 })
 
 module.exports = router

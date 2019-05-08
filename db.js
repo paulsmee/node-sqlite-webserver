@@ -1,4 +1,5 @@
 'use strict'
+
 var sqlite3 = require('sqlite3')
 var db = new sqlite3.Database('test.db')
 
@@ -10,7 +11,7 @@ db.get('SELECT * FROM temps WHERE rowid = 3', function(err, row){
     }
     else{
         console.log('Row ID: ' + row._id + " shows a temperature of: " + row.temp +"c")
-        tempstats.currentTemp = row.temp;
+        tempstats.selectedTemp = row.temp;
     }
 })
 
