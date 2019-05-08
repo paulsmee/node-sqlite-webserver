@@ -10,7 +10,7 @@ router.use(express.urlencoded())
 router.use(express.json())
 
 router.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html')
+  res.sendFile('/index.html')
   console.log("Access Detected!")
 })
 
