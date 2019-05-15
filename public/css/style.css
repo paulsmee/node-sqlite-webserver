@@ -1,8 +1,95 @@
-h1
-{color: black; text-align: left; font-family: Helvetica;}
+h1 {
+    color: black; 
+    text-align: left; 
+    font-family: Helvetica;
+  }
 
-p
-{ color: black; text-align: left; font-family: Helvetica;}
+p { 
+    color: black; 
+    text-align: left; 
+    font-family: Helvetica;
+  }
 
-.header
-{ padding: 20px; text-align: center; background: #1abc9c; color: white; font-size: 20px;}
+/* .header { 
+    padding: 20px; 
+    text-align: center; 
+    background: #1abc9c; 
+    color: white; 
+    font-size: 20px;
+  } */
+
+body {
+    margin: 0;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* .header {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+  } */
+  
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(108, 150, 175);
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 17px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: rgb(19, 61, 68);
+  }
+  
+  .topnav a.active {
+    background-color: rgb(110, 181, 214);
+    color: white;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(199, 210, 211);
+    color: rgb(101, 117, 128);
+    text-align: center;
+    font-size: 10px;
+    height: fit-content;
+  }
+
+  div.polaroid {
+    width: 20%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  img {width: auto}
+  img.logo {width: auto}
+  
+  div.container {
+    text-align: center;
+    padding: 10px 20px;
+  }

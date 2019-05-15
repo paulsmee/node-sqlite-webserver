@@ -15,14 +15,17 @@ db.get('SELECT * FROM temps WHERE rowid = 3', function(err, row){
     }
 })
 
-db.get('SELECT * FROM temps WHERE date = DATE("now")', function(err, row){
+db.get('SELECT * FROM temps WHERE date order by date desc limit 1', function(err, row){
     if(err){
         console.log('Oh no!' + err.message);
+        return;
     }
-    else{
-        console.log('Row ID: ' + row._id + " shows a temperature of: " + row.temp +"c")
-        tempstats.currentTemp = row.temp;
-    }
+
+    console.log(row)
+
+    console.log('Row ID: ' + row._id + " shows a temperature of: " + row.temp +"c")
+    tempstats.currentTemp = row.temp;
+
 })
 
 module.exports = tempstats

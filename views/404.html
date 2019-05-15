@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hudson Science Labs</title>
+        <meta charset="utf-8">
+        <!-- <base href="https://www.hudsonsciencelabs.com" target="_blank"/> -->
+        <script src='/js/jquery-2.2.4.min.js'></script>
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon">
+    </head>
+    <body>
+
+        <div id="navbar">
+            <a class="active" href="javascript:void(0)">Home</a>
+            <a href="javascript:void(0)">News</a>
+            <a href="javascript:void(0)">Contact</a>
+        </div>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+              } else {
+                navbar.classList.remove("sticky");
+              }
+            }
+        </script>
+        <p>404 Mutha Fucka!!</p>    
+    </body>
+</html>

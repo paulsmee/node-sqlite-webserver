@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Hudson Science Labs </title>
-        <script src='./jquery.min1.9.1.js'></script>
+        <script src='./js/jquery-2.2.4.min.js'></script>
     </head>
     <body>
 <!-- Show Temps from DB -->
@@ -14,12 +14,12 @@
         
          <script>
                 window.getTempFromDatabase = function() {
-                  $.get('/currentTemp')
-                    .done(function(value2) {
+                 $.get('/currentTemp')
+                    .then(function(value2) {
                       console.log(value2)
                       document.getElementById("p1").innerHTML = "The current temperature outside is: " + value2+''+"c";
                     })
-                    .catch(function(err) {
+                    .fail(function(err) {
                       console.log('uh oh')
                     });
               }
@@ -32,11 +32,11 @@
                   <script>
                     window.getTempFromDatabase = function() {
                       $.get('/selectedTemp')
-                        .done(function(value2) {
+                        .then(function(value2) {
                           console.log(value2)
                           document.getElementById("p2").innerHTML = "The temperature outside on Saturday was: " + value2+''+"c";
                         })
-                        .catch(function(err) {
+                        .fail(function(err) {
                           console.log('uh oh')
                         });
                   }

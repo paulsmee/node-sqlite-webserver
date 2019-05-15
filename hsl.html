@@ -4,18 +4,31 @@
         <title>Hudson Science Labs</title>
         <meta charset="utf-8">
         <!-- <base href="https://www.hudsonsciencelabs.com" target="_blank"/> -->
-        <script src='/public/js/jquery-2.2.4.min.js'></script>
+        <script src='/js/jquery-2.2.4.min.js'></script>
         <link rel="stylesheet" href="/css/style.css">
         <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     </head>
     <body>
-        <div class="header">
-            <img src="/images/logo.png">
-            <h1>Hello</h1>
-            <p>This is my header</p>
-        </div>>
-
+            <script>
+                    window.onscroll = function() {myFunction()};
+                    
+                    var navbar = document.getElementById("navbar");
+                    var sticky = navbar.offsetTop;
+                    
+                    function myFunction() {
+                      if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky")
+                      } else {
+                        navbar.classList.remove("sticky");
+                      }
+                    }
+                    </script>
+<div id="navbar">
+        <a class="active" href="javascript:void(0)">Home</a>
+        <a href="javascript:void(0)">News</a>
+        <a href="javascript:void(0)">Contact</a>
+      </div>
 <div>
 <h1> Welcome to Hudson Science Laboratories</h1>
 <p id="st1">
