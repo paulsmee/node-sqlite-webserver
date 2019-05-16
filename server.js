@@ -19,28 +19,35 @@ app.get("/", function(request, response) {
     });
 });
 
-app.get('/about', function(req, res) {
-    res.render('about', {
+app.get("/index", function(request, response) {
+    response.render("index", {
+    });
+});
+
+app.get('/astronomy', function(req, res) {
+    res.render('index-astronomy', {
     })
 })
 
-app.get('/contact', function(req, res) {
-    res.render('contact')
+app.get('/botany', function(req, res) {
+    res.render('index-botany')
 })
 
-// Build projects
-app.get('/projects', function(req, res) {
-    res.render('projects')
+app.get('/home-automation', function(req, res) {
+    res.render('index-automation')
 })
 
-// Science missions
-app.get('/missions', function(req, res) {
-    res.render('missions')
+app.get('/backyard-science', function(req, res) {
+    res.render('index-science')
 })
 
-// Backyard Science
-app.get('/backyardscience', function(req, res) {
-    res.render('backyardscience')
+app.get('/electronics', function(req, res) {
+    res.render('index-electronics')
+})
+
+app.get('/about', function(req, res) {
+    res.render('index-about', {
+    })
 })
 
 // 4xx Errors are stored below
