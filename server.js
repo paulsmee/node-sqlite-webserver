@@ -26,32 +26,43 @@ app.get("/", function(request, response) {
 
 app.get("/index", function(request, response) {
     response.render("index", {
-    });
-});
-
-app.get('/astronomy', function(req, res) {
-    res.render('index-astronomy', {
+        page_name: 'index'
     })
 })
 
+app.get('/astronomy', function(req, res) {
+    res.render('index-astronomy'), {
+        page_name: 'astronomy'
+    }
+})
+
 app.get('/botany', function(req, res) {
-    res.render('index-botany')
+    res.render('index-botany'), {
+        page_name: 'botany'
+    }
 })
 
 app.get('/home-automation', function(req, res) {
-    res.render('index-automation')
+    res.render('index-automation'), {
+        page_name: 'automation'
+    }
 })
 
 app.get('/backyard-science', function(req, res) {
-    res.render('index-science')
+    res.render('index-science'), {
+        page_name: 'science'
+    }
 })
 
 app.get('/electronics', function(req, res) {
-    res.render('index-electronics')
+    res.render('index-electronics'), {
+        page_name: 'electronics'
+    }
 })
 
 app.get('/about', function(req, res) {
     res.render('index-about', {
+        page_name: 'about'
     })
 })
 
