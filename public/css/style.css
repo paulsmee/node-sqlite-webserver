@@ -61,7 +61,7 @@ p {
   padding-top: 60px;
 }
 
-/* Create three unequal columns that float next to each other */
+/* Create columns that float next to each other */
 .column {
   float: left;
   padding: 10px;
