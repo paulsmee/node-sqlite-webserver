@@ -1,102 +1,116 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-  html {
-  scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: arial;
+    margin: 0;
+    font-family: arial;
 }
 
 p {
-  text-align: justify;
+    text-align: justify;
 }
+
 .header {
-  background-color: rgb(125, 165, 189);
-  text-align: left;
-  padding: 20px;
+    background-color: rgb(125, 165, 189);
+    text-align: left;
+    padding: 20px;
 }
+
 
 /* Navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: rgb(108, 150, 175);
+
+#topnav {
+    overflow: hidden;
+    background-color: rgb(108, 150, 175);
 }
-  
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 20px 17px;
-  text-decoration: none;
-  font-size: 17px;
+
+#topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 17px;
+    text-decoration: none;
+    font-size: 17px;
 }
-  
-.topnav a:hover {
-  background-color: #ddd;
-  color: rgb(19, 61, 68);
+
+#topnav a:hover {
+    background-color: #ddd;
+    color: rgb(19, 61, 68);
 }
-  
-.topnav a.active {
-  background-color: rgb(110, 181, 214);
-  color: white;
+
+#topnav a.active {
+    background-color: rgb(110, 181, 214);
+    color: white;
 }
-  
+
 .content {
-  padding: 16px;
+    padding: 16px;
 }
-  
+
 .sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
-  
-.sticky + .content {
-  padding-top: 60px;
+
+.sticky+.content {
+    padding-top: 60px;
 }
+
 
 /* Create columns that float next to each other */
+
 .column {
-  float: left;
-  padding: 10px;
+    float: left;
+    padding: 10px;
 }
+
 
 /* Left and right column */
+
 .column.side {
-  width: 25%;
+    width: 25%;
 }
+
 
 /* Middle column */
+
 .column.middle {
-  width: 75%;
+    width: 75%;
 }
+
 
 /* Clear floats after the columns */
+
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
+
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
 @media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
-  }
+    .column.side,
+    .column.middle {
+        width: 100%;
+    }
 }
 
 .footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(199, 210, 211);
-  color: rgb(55, 64, 70);
-  text-align: center;
-  font-size: 10px;
-  height: fit-content;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(199, 210, 211);
+    color: rgb(55, 64, 70);
+    text-align: center;
+    font-size: 10px;
+    height: fit-content;
 }
