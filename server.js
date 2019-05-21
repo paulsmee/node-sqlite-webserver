@@ -2,7 +2,7 @@ var express = require('express')
 var path = require('path')
 var ejs = require('ejs')
 var tempstats = require('./db.js')
-    var app = express()
+var app = express()
 
 // File and View information
 app.set('views', path.resolve(__dirname, "views"))
@@ -15,13 +15,12 @@ app.engine('html', ejs.renderFile)
 app.use(function(req, res, next) {
     res.locals.userAgent = req.headers['user-agent']
     next()
-})
+});
 
 
 // All general page links should be listed below
 app.get("/", function(request, response) {
-    response.render("index", {
-    });
+    response.render("index", {});
 });
 
 app.get("/index", function(request, response) {
@@ -68,8 +67,7 @@ app.get('/about', function(req, res) {
 
 // Json testing sendfile is different to sendFile
 app.get('/view', function(req, res) {
-    res.sendfile('./test.json', {
-    })
+    res.sendfile('./test.json', {})
 })
 
 // 4xx Errors are served from here
@@ -82,14 +80,14 @@ app.use(function(req, res) {
 
 // SQL data interaction functions from db.js
 app.get('/currentTemp', function(req, res) {
-    res.send(tempstats.currentTemp+'')
-  })
+    res.send(tempstats.currentTemp + '')
+})
 app.get('/selectedTemp', function(req, res) {
-   res.send(tempstats.selectedTemp+'')
-  })
+    res.send(tempstats.selectedTemp + '')
+})
 
 // Server listen code
 var port = 3000
-app.listen(port, function(){
+app.listen(port, function() {
     console.log('The server is listening on port ' + port)
 })
