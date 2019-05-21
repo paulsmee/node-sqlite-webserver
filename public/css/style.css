@@ -16,7 +16,7 @@ p {
 }
 
 .header {
-    background-color: rgb(125, 165, 189);
+    background-color: #6da6c4;
     text-align: left;
     padding: 20px;
 }
@@ -30,7 +30,7 @@ p {
 
 .topnav {
     overflow: hidden;
-    background-color: rgb(108, 150, 175);
+    background-color: rgb(64, 112, 139);
 }
 
 .topnav a {
@@ -50,7 +50,7 @@ p {
 
 .topnav a.active {
     background-color: rgb(110, 181, 214);
-    color: white;
+    color: rgb(19, 61, 68);
 }
 
 .content {
@@ -104,7 +104,7 @@ p {
 }
 
 .btn-group a {
-    background-color: rgb(108, 150, 175);
+    background-color: rgb(64, 112, 139);
     /* Green background */
     border: 1px solid rgb(19, 61, 68);
     /* Green border */
@@ -116,6 +116,7 @@ p {
     /* Pointer/hand icon */
     float: left;
     /* Float the buttons side by side */
+    text-decoration-line: none;
 }
 
 .btn-group a:not(:last-child) {

@@ -29,9 +29,9 @@ app.get("/index", function(request, response) {
     })
 })
 
-app.get('/astronomy', function(req, res) {
-    res.render('index-astronomy'), {
-        page_name: 'astronomy'
+app.get('/news', function(req, res) {
+    res.render('index-news'), {
+        page_name: 'news'
     }
 })
 
