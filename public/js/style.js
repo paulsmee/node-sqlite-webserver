@@ -16,19 +16,13 @@ function myFunction() {
     }
 }
 
-var mapping = {
-    "/astronomy": "#topnav a.active",
-    "http://example.org/page2": "path.to.other.element",
-}
+var pathname = window.location.pathname,
+    pages = ['/index', '/astronomy', 'electronics', 'about'];
 
-
-
-$(function() {
-
-    $(mapping[window.location.href]).addClass('active');
-
+$('.topnav').each(function(i) {
+    if (pathname.includes(pages[i])) this.addClass('active');
+    else if (this.className.includes('active')) this.removeClass('active');
 });
-
 // window.onload = function() { buttonActive() };
 
 // var pageLoad = navbar.classList
