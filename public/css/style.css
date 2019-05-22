@@ -71,7 +71,7 @@ p {
 }
 
 
-/* Add a red background color to navbar links on hover */
+/* Add a background color to navbar links on hover */
 
 .navbar a:hover,
 .dropdown:hover .dropbtn,
@@ -212,10 +212,39 @@ p {
 }
 
 
+/* Container for articles with picture on the left and text to the right */
+
+.articlecontainer {
+    border: 2px solid #ccc;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+
+/* Float images inside the container to the left. Add a right margin */
+
+.articlecontainer img {
+    float: left;
+    margin-right: 20px;
+    /* border-radius: 50%; */
+}
+
+
+/* Increase the font-size of a span element */
+
+.articlecontainer span {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+
 /* Clear floats */
 
 .container::after,
-.row::after {
+.row::after,
+.articlecontainer::after {
     content: "";
     clear: both;
     display: table;
@@ -228,6 +257,14 @@ p {
     .column.side,
     .column.middle {
         width: 100%;
+    }
+    .articlecontainer {
+        text-align: center;
+    }
+    .articlecontainer img {
+        margin: auto;
+        float: none;
+        display: block;
     }
 }
 

@@ -36,7 +36,28 @@ app.get('/news', function(req, res) {
 })
 
 app.get('/projects', function(req, res) {
-    res.render('index-projects'), {
+        res.render('index-projects'), {
+            page_name: 'projects'
+        }
+    })
+    // Individual Project Pages
+app.get('/project1', function(req, res) {
+    res.render('projects/detailed/project1-detailed'), {
+        page_name: 'projects'
+    }
+})
+app.get('/project2', function(req, res) {
+    res.render('projects/detailed/project2-detailed'), {
+        page_name: 'projects'
+    }
+})
+app.get('/project3', function(req, res) {
+    res.render('projects/detailed/project3-detailed'), {
+        page_name: 'projects'
+    }
+})
+app.get('/project4', function(req, res) {
+    res.render('projects/detailed/project4-detailed'), {
         page_name: 'projects'
     }
 })
@@ -49,7 +70,29 @@ app.get('/headoffice', function(req, res) {
 
 app.get('/missions', function(req, res) {
     res.render('index-missions'), {
+        page_name: 'missions'
+    }
+})
+
+// Individual Mission Pages
+app.get('/mission1', function(req, res) {
+    res.render('missions/detailed/mission1-detailed'), {
+        page_name: 'missions'
+    }
+})
+app.get('/mission2', function(req, res) {
+    res.render('missions/detailed/mission2-detailed'), {
         page_name: 'misssions'
+    }
+})
+app.get('/mission3', function(req, res) {
+    res.render('missions/detailed/mission3-detailed'), {
+        page_name: 'missions'
+    }
+})
+app.get('/mission4', function(req, res) {
+    res.render('missions/detailed/mission4-detailed'), {
+        page_name: 'missions'
     }
 })
 
