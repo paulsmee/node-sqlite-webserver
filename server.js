@@ -35,27 +35,27 @@ app.get('/news', function(req, res) {
     }
 })
 
-app.get('/botany', function(req, res) {
-    res.render('index-botany'), {
-        page_name: 'botany'
+app.get('/projects', function(req, res) {
+    res.render('index-projects'), {
+        page_name: 'projects'
     }
 })
 
-app.get('/home-automation', function(req, res) {
-    res.render('index-automation'), {
-        page_name: 'automation'
+app.get('/headoffice', function(req, res) {
+    res.render('index-headoffice'), {
+        page_name: 'headoffice'
     }
 })
 
-app.get('/backyard-science', function(req, res) {
-    res.render('index-science'), {
-        page_name: 'science'
+app.get('/missions', function(req, res) {
+    res.render('index-missions'), {
+        page_name: 'misssions'
     }
 })
 
-app.get('/electronics', function(req, res) {
-    res.render('index-electronics'), {
-        page_name: 'electronics'
+app.get('/research', function(req, res) {
+    res.render('index-research'), {
+        page_name: 'research'
     }
 })
 
