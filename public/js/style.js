@@ -2,7 +2,7 @@
 window.onscroll = function() { myFunction() };
 
 // Get the navbar
-var navbar = document.getElementById("topnav");
+var navbar = document.getElementById("navbar");
 
 // Get the offset position of the navbar
 var sticky = navbar.offsetTop;
@@ -16,13 +16,13 @@ function myFunction() {
     }
 }
 
-var pathname = window.location.pathname,
-    pages = ['/index', '/astronomy', 'electronics', 'about'];
+// var pathname = window.location.pathname,
+//     pages = ['/index', '/astronomy', 'electronics', 'about'];
 
-$('.topnav').each(function(i) {
-    if (pathname.includes(pages[i])) this.addClass('active');
-    else if (this.className.includes('active')) this.removeClass('active');
-});
+// $('.topnav').each(function(i) {
+//     if (pathname.includes(pages[i])) this.addClass('active');
+//     else if (this.className.includes('active')) this.removeClass('active');
+// });
 // window.onload = function() { buttonActive() };
 
 // var pageLoad = navbar.classList
