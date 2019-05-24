@@ -4,7 +4,7 @@ var ejs = require('ejs')
 var tempstats = require('./db.js')
 var app = express()
 
-// File and View information
+// File and View information 
 app.set('views', path.resolve(__dirname, "views"))
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs')
