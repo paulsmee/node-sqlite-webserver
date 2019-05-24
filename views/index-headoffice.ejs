@@ -1,44 +1,39 @@
-<% include header-headoffice %>
+<% include header-about %>
 
-<div class="row">
-                <div class='column'>
-                        <div class="column middle">
-        
-                        <% include articles/hsl-welcome %>
-        
-                        <% include articles/article1 %>
-        
-                        <a href="#">
-                        <img src="/images/img_snow.jpg" alt="Snow" style="width:100%">
-                        </a>  
-                        <a href="#">
-                        <img src="/images/img_forest.jpg" alt="Forest" style="width:100%">
-                        </a>
-                        <a href="#">
-                        <img src="/images/img_mountains.jpg" alt="Mountains" style="width:100%">
-                        </a>    
-                        
-                        <% include articles/article2 %>
-                        <% include articles/article3 %>
-                        <% include articles/article4 %>
-                        </div>
-                
-                        <div class="column side">
-                                <a href="#">
-                                <img src="/images/img_snow.jpg" alt="Snow" style="width:100%">
-                                </a>  
-                                <a href="#">
-                                <img src="/images/img_forest.jpg" alt="Forest" style="width:100%">
-                                </a>
-                                <a href="#">
-                                <img src="/images/img_mountains.jpg" alt="Mountains" style="width:100%">
-                                </a>                         
-                        
-                        <% include articles/article5 %>
-                        <% include articles/article6 %>
-        
-                        </div>
-                </div>
-        </div>  
-        
-        <% include footer %>
+    <link rel="stylesheet" href="/css/graph.css">
+    <div class="row">
+        <div class='column'>
+            <div class="column half">
+                <% include missions/mission1 %>
+                    <%# Here is the graph for temps %>
+                        <% include headoffice/temp-graph %>
+                            <br>
+                            <br>
+                            <%# include articles/article2 %>
+            </div>
+
+            <div class="column half">
+            <% include headoffice/temp-graph %>
+            <br>
+            <br>
+            <% include articles/article2 %>
+            <br>
+            <br>
+                <a href="#">
+                    <img src="/images/img_snow.jpg" alt="Snow" style="width:100%">
+                </a>
+                <a href="#">
+                    <img src="/images/img_forest.jpg" alt="Forest" style="width:100%">
+                </a>
+                <a href="#">
+                    <img src="/images/img_mountains.jpg" alt="Mountains" style="width:100%">
+                </a>
+
+                <% include articles/article5 %>
+                    <% include articles/article6 %>
+
+            </div>
+        </div>
+    </div>
+
+    <% include footer %>
