@@ -3,6 +3,8 @@ var path = require('path')
 var ejs = require('ejs')
 var tempstats = require('./db.js')
 var app = express()
+app.use(express.urlencoded())
+app.use(express.json())
 
 // File and View information 
 app.set('views', path.resolve(__dirname, "views"))
@@ -114,17 +116,18 @@ app.get('/view', function(req, res) {
 })
 
 // 4xx Errors are served from here
-app.use(function(req, res) {
-    res.status(404)
-    res.render('404.html', {
-        urlAttempted: req.url
-    })
-})
+// app.use(function(req, res) {
+//     res.status(404)
+//     res.render('404.html', {
+//         urlAttempted: req.url
+//     })
+// })
 
 // SQL data interaction functions from db.js
 app.get('/currentTemp', function(req, res) {
     res.send(tempstats.currentTemp + '')
 })
+
 app.get('/selectedTemp', function(req, res) {
     res.send(tempstats.selectedTemp + '')
 })

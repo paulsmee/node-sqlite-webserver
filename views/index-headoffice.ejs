@@ -1,4 +1,4 @@
-<% include header-about %>
+<% include header-headoffice %>
 
     <link rel="stylesheet" href="/css/graph.css">
     <div class="row">
@@ -19,6 +19,24 @@
             <% include articles/article2 %>
             <br>
             <br>
+
+<p id="p1">Test</p>
+<script>
+    window.getTempFromDatabase = function() {
+        $.get('/currentTemp')
+            .then(function(value2) {
+                console.log(value2)
+                document.getElementById("p1").innerHTML = "The current temperature outside is: " + value2 + '' + "c";
+            })
+            .fail(function(err) {
+                console.log('uh oh')
+            });
+    }
+</script>
+         <script>
+           getTempFromDatabase();
+        //    setInterval(getTempFromDatabase,6000)
+         </script>
                 <a href="#">
                     <img src="/images/img_snow.jpg" alt="Snow" style="width:100%">
                 </a>

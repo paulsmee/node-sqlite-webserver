@@ -156,6 +156,7 @@ p {
 
 .column.half {
     width: 50%;
+    display: table-cell;
 }
 
 
